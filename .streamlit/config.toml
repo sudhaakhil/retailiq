@@ -1,0 +1,13 @@
+[theme]
+primaryColor = "#0072B2"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+# RetailIQ has no login, so only this computer may connect (it is not exposed to your network).
+address = "127.0.0.1"
+runOnSave = false

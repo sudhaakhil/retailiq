@@ -1,0 +1,14 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated data - recreate with: python -m retailiq.cli init-db
+data/retailiq.db
+data/backups/
+data/exports/
+
+# Secrets (none are used by RetailIQ, but never commit them)
+.streamlit/secrets.toml
+.env

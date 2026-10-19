@@ -1,0 +1,10 @@
+# RetailIQ - direct dependencies, pinned to the versions the test suite was run against
+# (Windows 11, Python 3.13.3, 64-bit). Install with:  python -m pip install -r requirements.txt
+# requirements-lock.txt lists every installed package (including indirect ones) for an exact rebuild.
+streamlit==1.66.0
+pandas==3.0.6
+numpy==2.5.4
+plotly==7.1.0
+SQLAlchemy==2.1.5
+scikit-learn==1.9.1
+pytest==9.1.1
