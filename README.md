@@ -39,9 +39,17 @@ Captured from the running app (small, 800×450, because they were taken in a pre
 Tested on Windows 11 with **Python 3.13.3 (64-bit)**. You need Python on your PATH — check with `python --version`.
 (If `py --version` does not work on your computer, ignore it: this project only uses the `python` command.)
 
-### 1. Put the project in `D:\RetailIQ`
+### 1. Get the project into `D:\RetailIQ`
 
-Unzip the downloaded file so the folder is `D:\RetailIQ` (it should contain `streamlit_app.py`, `retailiq\`, `app_pages\`, `tests\`, `docs\`).
+**Option A — clone it from GitHub (recommended; needs [Git for Windows](https://git-scm.com/download/win)):**
+
+```powershell
+git clone https://github.com/sudhaakhil/retailiq.git D:\RetailIQ
+```
+
+**Option B — download the ZIP:** on the repository page choose *Code → Download ZIP* and extract it. GitHub wraps everything in a folder called `retailiq-main`, so move its contents up until the folder is `D:\RetailIQ` and `streamlit_app.py` sits directly inside it.
+
+Either way, `D:\RetailIQ` should contain `streamlit_app.py`, `retailiq\`, `app_pages\`, `tests\` and `docs\`.
 
 ### 2. Open PowerShell in that folder
 
@@ -169,11 +177,16 @@ RetailIQ/
 
 ## Using Git
 
+If you cloned the repository, it is already a Git repository connected to GitHub. Make your own changes on a branch so `main` stays clean:
+
 ```powershell
-git init
-git add .
-git commit -m "RetailIQ: initial version"
+git switch -c my-change
+git add -A
+git commit -m "Describe what you changed"
+git push -u origin my-change
 ```
+
+If you downloaded the ZIP instead, start your own repository with `git init`, `git add .` and `git commit -m "RetailIQ: initial version"`.
 
 `.gitignore` already excludes `.venv`, caches and the generated `data\retailiq.db` (anyone can recreate it with `init-db`).
 
